@@ -199,3 +199,101 @@ client.connect(function (err) {
 });
 
 */
+
+
+/*
+const MongoClient = require('mongodb').MongoClient;
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+// Database Name
+const dbName = 'your_database_name';
+
+// Collection Name
+const collectionName = 'your_collection_name';
+
+// Given input
+const givenInput = 'your_given_input';
+
+// MongoDB array field
+const arrayField = 'your_array_field';
+
+// Create a new MongoClient
+const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Connect to MongoDB
+client.connect(function (err) {
+  if (err) {
+    console.error('Error connecting to MongoDB:', err);
+    return;
+  }
+
+  console.log('Connected successfully to MongoDB');
+
+  const db = client.db(dbName);
+  const collection = db.collection(collectionName);
+
+  // Delete the array element where given input and array value are equal
+  collection.updateMany({}, { $pull: { [arrayField]: givenInput } }, function (err, result) {
+    if (err) {
+      console.error('Error deleting array element:', err);
+    } else {
+      console.log('Array elements deleted:', result.modifiedCount);
+    }
+
+    // Close the connection
+    client.close();
+  });
+});
+
+
+
+/*
+const MongoClient = require('mongodb').MongoClient;
+
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+// Database Name
+const dbName = 'your_database_name';
+
+// Collection Name
+const collectionName = 'your_collection_name';
+
+// Given input
+const givenInput = 'your_given_input';
+
+// MongoDB array field
+const arrayField = 'your_array_field';
+
+// Create a new MongoClient
+const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Connect to MongoDB
+client.connect(function (err) {
+  if (err) {
+    console.error('Error connecting to MongoDB:', err);
+    return;
+  }
+
+  console.log('Connected successfully to MongoDB');
+
+  const db = client.db(dbName);
+  const collection = db.collection(collectionName);
+
+  // Delete the array element where given input and array value are equal
+  collection.updateMany({}, { $pull: { [arrayField]: givenInput } }, function (err, result) {
+    if (err) {
+      console.error('Error deleting array element:', err);
+    } else {
+      console.log('Array elements deleted:', result.modifiedCount);
+    }
+
+    // Close the connection
+    client.close();
+  });
+});
+
+*/
+*/
